@@ -1,0 +1,43 @@
+<style>
+  nav { display: flex; gap: 24px; align-items: center; }
+
+  .dropdown { position: relative; }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    z-index: 100;
+  }
+
+  .dropdown-menu a {
+    display: block;
+    padding: 10px 16px;
+    white-space: nowrap;
+  }
+
+  .dropdown:hover .dropdown-menu,
+  .dropdown:focus-within .dropdown-menu {
+    display: block;
+  }
+</style>
+
+<nav>
+  <a href="services.html">Services</a>
+
+  <div class="dropdown">
+    <a href="about.html">About</a>
+    <div class="dropdown-menu">
+      <a href="practitioner.html">Practitioner</a>
+      <a href="expectations.html">What to Expect</a>
+    </div>
+  </div>
+
+  <a href="locations.html">Locations</a>
+  <a href="faq.html">FAQ</a>
+  <a href="book.html">Book Now</a>
+</nav>
