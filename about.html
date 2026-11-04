@@ -9,6 +9,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+.joblist{list-style:none;padding:0;margin-top:2.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0 3rem;border-top:2px solid var(--bone)}
+.joblist li{display:flex;gap:.9rem;align-items:baseline;padding:1rem 0;border-bottom:1px solid var(--line);font-weight:500}
+.joblist li::before{content:"";flex:none;width:.5rem;height:.5rem;border-radius:50%;background:var(--hot);transform:translateY(-.1rem)}
+.num{font-family:var(--head);font-weight:800;font-size:1.2rem;letter-spacing:.08em;color:var(--hot)}
+</style>
 </head>
 <body>
 <header>
@@ -34,18 +40,17 @@
 <p style="margin-top:1.2rem;color:var(--mute)">Too many people leave an appointment feeling rushed, unsure of what's wrong and without a plan. Name Physiotherapy was set up to change that: more time, clear explanations and a rehabilitation plan that fits your life.</p>
 <p style="margin-top:1rem;color:var(--mute)">One on one treatment with your physiotherapist in a private room and open gym spaces to transition into real-world strength and mobility.</p>
 <div class="values">
-<div class="tile"><h3>People first</h3><p>You get time, attention and honest answers.</p></div>
-<div class="tile"><h3>Real results</h3><p>We measure progress so you can see it too.</p></div>
-<div class="tile"><h3>Clear plans</h3><p>Simple, concise and built around your goals.</p></div>
+<div class="tile"><span class="num">01</span><h3>People first</h3><p>Unhurried appointments, honest answers and a physiotherapist who listens to what matters to you.</p></div>
+<div class="tile"><span class="num">02</span><h3>Real results</h3><p>We track your progress at every step, so you can see and feel the difference as you get stronger.</p></div>
+<div class="tile"><span class="num">03</span><h3>Clear plans</h3><p>A simple, step-by-step plan built around your goals, so you always know what to do next.</p></div>
 </div></div></section>
 <section style="background:var(--bg2)"><div class="wrap">
 <h2>Meet <span class="hot">Chris</span></h2>
 <div class="Chris">
 <div class="person"><div class="ph">Photo</div><h3>Chris</h3><p>Doctor of Physiotherapy, Master of Science in Rehabilitation, Bachelor of Science in Kinesiology</p>
-<p style="margin:1.2rem 0 1.8rem;color:var(--mute)">Chris built his practice based on how physiotherapy should be: hands-on treatment, evidence-based treatment, reactive and preventative care. After watching other clinics approach injuries with cookie-cutter approaches, Chris wanted something different. Individualized treatments tailored to your body.</p>
-<p>He values empowering his clients to actively manage their conditions by using education, manual therapy and rehabilitative exercises. Chris continues to develop professionally each year.</p>
-  
-<p>Outside of work, Chris enjoys staying fit through various workout and sporting activities, travelling and reading self-help books.</p>
+<p style="margin-top:1.2rem;color:var(--mute)">Chris built his practice based on how physiotherapy should be: hands-on treatment, evidence-based treatment, reactive and preventative care. After watching other clinics approach injuries with cookie-cutter approaches, Chris wanted something different. Individualized treatments tailored to your body.</p>
+<p style="margin-top:1.2rem;color:var(--mute)">He values empowering his clients to actively manage their conditions by using education, manual therapy and rehabilitative exercises. Chris continues to develop professionally each year.</p>
+<p style="margin-top:1.2rem;color:var(--mute)">Outside of work, Chris enjoys staying fit through various workout and sporting activities, travelling and reading self-help books.</p>
 </div>
 </div></div></section>
 <section><div class="wrap">
@@ -79,18 +84,19 @@
 </div></div></section>
 <section style="background:var(--bg2)"><div class="wrap">
 <h2>Work <span class="hot">Experience</span></h2>
-<div class="tiles">
-<div class="tile" style="background:var(--bg)"><h3>Researcher for total knee replacement, ACL reconstruction, Pregnancy</h3><p><!-- Add description here --></p></div>
-<div class="tile" style="background:var(--bg)"><h3>Disability support worker</h3><p><!-- Add description here --></p></div>
-<div class="tile" style="background:var(--bg)"><h3>Kinesiologist: Sport and fitness trainer</h3><p><!-- Add description here --></p></div>
-<div class="tile" style="background:var(--bg)"><h3>Personal trainer for individuals with disabilities</h3><p><!-- Add description here --></p></div>
-<div class="tile" style="background:var(--bg)"><h3>Receptionist</h3><p><!-- Add description here --></p></div>
-<div class="tile" style="background:var(--bg)"><h3>Banker</h3><p><!-- Add description here --></p></div>
-<div class="tile" style="background:var(--bg)"><h3>Cook</h3><p><!-- Add description here --></p></div>
-<div class="tile" style="background:var(--bg)"><h3>Contract tracing support officer</h3><p><!-- Add description here --></p></div>
-<div class="tile" style="background:var(--bg)"><h3>Laborer in Construction</h3><p><!-- Add description here --></p></div>
-<div class="tile" style="background:var(--bg)"><h3>Physiotherapy Assistant</h3><p><!-- Add description here --></p></div>
-</div></div></section>
+<ul class="joblist">
+<li>Researcher for total knee replacement, ACL reconstruction, Pregnancy</li>
+<li>Disability support worker</li>
+<li>Kinesiologist: Sport and fitness trainer</li>
+<li>Personal trainer for individuals with disabilities</li>
+<li>Receptionist</li>
+<li>Banker</li>
+<li>Cook</li>
+<li>Contract tracing support officer</li>
+<li>Laborer in Construction</li>
+<li>Physiotherapy Assistant</li>
+</ul>
+</div></section>
 <div class="band"><div class="wrap"><h2>Ready to<br>Get Started?</h2><p>Book Your Assessment Now.</p><a class="btn" href="https://optimumclinic.janeapp.com/#/staff_member/48" target="_blank" rel="noopener">Book today</a></div></div>
 </main>
 <footer class="site">
