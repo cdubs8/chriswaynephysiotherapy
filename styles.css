@@ -27,7 +27,6 @@ nav a:not(.btn){text-decoration:none;font-weight:500;color:var(--onnavy)}
 nav a:not(.btn):hover{color:#fff}
 nav .btn{padding:.55rem 1.2rem;background:#fff;color:var(--navy);border-color:#fff}
 nav .btn:hover{background:#E3ECFA;border-color:#E3ECFA}
-@media(max-width:700px){nav a:not(.btn){display:none}}
 
 .hero{padding:4.5rem 0 3.5rem}
 .hero .tag{color:var(--hot);font-weight:600;margin-bottom:1rem}
@@ -110,3 +109,18 @@ footer.site a:hover{color:#fff}
 dl{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.2rem;margin-top:1.5rem}
 dt{font-weight:600}dd{color:var(--mute)}
 nav a[aria-current]{color:#fff!important;border-bottom:2px solid var(--sky)}
+
+/* Mobile menu (menu.js adds the button and the has-menu class) */
+.menu-btn{display:none}
+@media(max-width:900px){
+  header.has-menu .menu-btn{display:inline-flex;align-items:center;gap:.6rem;background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55);border-radius:999px;padding:.4rem 1rem;font:inherit;font-weight:600;cursor:pointer}
+  header.has-menu .menu-btn:hover{background:rgba(255,255,255,.12)}
+  header.has-menu nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--navy);padding:.4rem 1.25rem 1.4rem;border-top:1px solid rgba(255,255,255,.18);box-shadow:0 14px 30px rgba(0,0,0,.28)}
+  header.has-menu nav.open{display:flex}
+  header.has-menu nav a:not(.btn){padding:.95rem 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:1.15rem}
+  header.has-menu nav .btn{margin-top:1.2rem;text-align:center;padding:.8rem 1.2rem}
+}
+@media(max-width:900px){
+  header:not(.has-menu) .wrap{flex-wrap:wrap}
+  header:not(.has-menu) nav{flex-wrap:wrap;gap:.6rem 1.1rem}
+}
