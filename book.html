@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Book now | Harbour Physio</title>
-<meta name="description" content="Book an assessment at Harbour Physio.">
+<title>Book now | CWP Physio</title>
+<meta name="description" content="Book an assessment at CWP Physio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
 <body>
 <header>
   <div class="wrap">
-    <a class="logo" href="index.html">Harbour<span class="hot">.</span>Physio</a>
+    <a class="logo" href="index.html">CWP<span class="hot">.</span>Physio</a>
     <nav aria-label="Main">
       <a href="index.html#top">Home</a>
       <a href="about.html">About</a>
@@ -30,30 +30,29 @@
 <main>
 <div class="pagehead"><div class="wrap">
 <h1>Book<br>today</h1>
-<p>One hour, one-on-one, with a plan to take away.</p>
+<p>One-on-one care, with a plan to take away.</p>
 </div></div>
 <section><div class="wrap contactbox">
 <div>
 <h2 style="font-size:clamp(2.2rem,5vw,3.4rem)">Request a time</h2>
-<p style="color:var(--mute);margin-top:1rem">Tell us a little about the problem. We reply within one working day to confirm.</p>
+<p style="color:var(--mute);margin-top:1rem">Tell us a little about the problem. We'll reply as soon as we can.</p>
 <form id="bookform">
 <label>Your name<input name="name" required autocomplete="name"></label>
 <label>Phone or email<input name="contact" required></label>
-<label>Preferred clinic<select name="clinic"><option>Harbour Town</option><option>Northside</option></select></label>
-<label>What's bothering you?<select name="area"><option>Back or neck</option><option>Shoulder or arm</option><option>Hip or knee</option><option>Foot or ankle</option><option>After surgery</option><option>Something else</option></select></label>
+<label>What's bothering you?<select name="area"><option>Head or jaw</option><option>Neck, mid back, low back</option><option>Shoulder, forearm, or hand</option><option>Hip</option><option>Knee</option><option>Foot or ankle</option><option>After surgery</option><option>After motor vehicle accident</option><option>Something Else? Detail below</option></select></label>
 <label>Anything else we should know?<textarea name="msg" rows="3"></textarea></label>
 <button class="btn" type="submit">Send booking request</button>
 <p class="note">This opens your email app with the details filled in.</p>
 </form></div>
 <div>
 <h2 style="font-size:clamp(2.2rem,5vw,3.4rem)">Prefer to call?</h2>
-<dl><dt>Phone</dt><dd><a href="tel:+16047036470">(604) 703-6470</a></dd><dt>Email</dt><dd><a href="mailto:info@optimumclinic.ca">info@optimumclinic.ca</a></dd><dt>Hours</dt><dd>Mon to Thu 9am to 8pm<br>Fri 9am to 5pm<br>Sat 9am to 1pm</dd></dl>
-<div class="tile" style="margin-top:2rem;min-height:0"><h3>Your first visit</h3><p>Bring any scans or reports and wear comfortable clothing. Your appointment is a full hour.</p></div>
+<dl><dt>Phone</dt><dd><a href="tel:+16047036470">(604) 703-6470</a></dd><dt>Email</dt><dd><a href="mailto:info@optimumclinic.ca">info@optimumclinic.ca</a></dd><dt>Hours</dt><dd>Monday to Thursday: 8:30am to 6:30pm<br>Friday: 8:30am to 5:00pm<br><small>Hours may vary.</small></dd></dl>
+<div class="tile" style="margin-top:2rem;min-height:0"><h3>Your first visit</h3><p>Bring any scans or reports and wear comfortable clothing. Your first visit is usually 30 or 45 minutes (60 minutes for TMJ physiotherapy).</p></div>
 </div></div></section>
 </main>
 <footer class="site">
   <div class="wrap">
-    <span>&copy; 2026 Harbour Physio</span>
+    <span>&copy; 2026 CWP Physio</span>
     <span><a href="index.html#top">Home</a> &middot; <a href="about.html">About</a> &middot; <a href="services.html">Services</a> &middot; <a href="conditions.html">Conditions</a> &middot; <a href="what-to-expect.html">What to Expect</a> &middot; <a href="locations.html">Contact</a> &middot; <a href="faq.html">FAQ</a> &middot; <a href="book.html">Book</a></span>
     <span><a href="tel:+16047036470">(604) 703-6470</a> &middot; <a href="mailto:info@optimumclinic.ca">info@optimumclinic.ca</a></span>
   </div>
@@ -62,7 +61,7 @@
 document.getElementById("bookform").addEventListener("submit",function(e){
   e.preventDefault();
   var f=new FormData(e.target);
-  var body="Name: "+f.get("name")+"\nContact: "+f.get("contact")+"\nClinic: "+f.get("clinic")+"\nArea: "+f.get("area")+"\n\n"+f.get("msg");
+  var body="Name: "+f.get("name")+"\nContact: "+f.get("contact")+"\nArea: "+f.get("area")+"\n\n"+f.get("msg");
   location.href="mailto:info@optimumclinic.ca?subject="+encodeURIComponent("Booking request")+"&body="+encodeURIComponent(body);
 });
 </script>
