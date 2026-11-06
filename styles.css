@@ -52,6 +52,7 @@ section{padding:5rem 0}
 .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:2.5rem}
 .tile{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:1.6rem;display:flex;flex-direction:column;gap:.8rem;min-height:260px}
 .tile p{color:var(--mute);flex:1;font-size:1rem}
+.tile h3{overflow-wrap:break-word}
 .tile a{font-weight:600;color:var(--hot);text-decoration:none}
 .tile a:hover{text-decoration:underline}
 .tile:hover{border-color:var(--hot)}
@@ -112,7 +113,7 @@ nav a[aria-current]{color:#fff!important;border-bottom:2px solid var(--sky)}
 
 /* Mobile menu (menu.js adds the button and the has-menu class) */
 .menu-btn{display:none}
-@media(max-width:900px){
+@media(max-width:1000px){
   header.has-menu .menu-btn{display:inline-flex;align-items:center;gap:.6rem;background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55);border-radius:999px;padding:.4rem 1rem;font:inherit;font-weight:600;cursor:pointer}
   header.has-menu .menu-btn:hover{background:rgba(255,255,255,.12)}
   header.has-menu nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--navy);padding:.4rem 1.25rem 1.4rem;border-top:1px solid rgba(255,255,255,.18);box-shadow:0 14px 30px rgba(0,0,0,.28)}
@@ -120,7 +121,7 @@ nav a[aria-current]{color:#fff!important;border-bottom:2px solid var(--sky)}
   header.has-menu nav a:not(.btn){padding:.95rem 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:1.15rem}
   header.has-menu nav .btn{margin-top:1.2rem;text-align:center;padding:.8rem 1.2rem}
 }
-@media(max-width:900px){
+@media(max-width:1000px){
   header:not(.has-menu) .wrap{flex-wrap:wrap}
   header:not(.has-menu) nav{flex-wrap:wrap;gap:.6rem 1.1rem}
 }
