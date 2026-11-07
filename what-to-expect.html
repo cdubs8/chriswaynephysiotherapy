@@ -16,10 +16,20 @@
 .checks{list-style:none;padding:0;margin-top:2.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0 3rem;border-top:2px solid var(--bone)}
 .checks li{display:flex;gap:.9rem;align-items:baseline;padding:1rem 0;border-bottom:1px solid var(--line);font-weight:500}
 .checks li::before{content:"";flex:none;width:.5rem;height:.5rem;border-radius:50%;background:var(--hot);transform:translateY(-.1rem)}
-.lengths{list-style:none;padding:0;margin-top:2.5rem;max-width:760px;border-top:2px solid var(--bone)}
-.lengths li{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--line);font-weight:500}
-.lengths li span:last-child{font-family:var(--head);font-weight:700;font-size:1.3rem;color:var(--hot);text-align:right}
-.lengths small{display:block;color:var(--mute);font-weight:400;font-size:.95rem}
+.lengths{width:100%;max-width:860px;border-collapse:collapse;margin-top:2.5rem;border-top:2px solid var(--bone)}
+.lengths th{font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:1.05rem;color:var(--mute);text-align:left;padding:.9rem 1rem .9rem 0;border-bottom:1px solid var(--line)}
+.lengths th:not(:first-child){width:12rem;white-space:nowrap}
+.lengths td{padding:1.1rem 1rem 1.1rem 0;border-bottom:1px solid var(--line);vertical-align:baseline;font-weight:500}
+.lengths td:not(:first-child){font-family:var(--head);font-weight:700;font-size:1.5rem;color:var(--hot);white-space:nowrap}
+.lengths .sub{font-family:var(--body);font-weight:400;font-size:1rem;color:var(--mute);margin-left:.4rem}
+@media(max-width:640px){
+.lengths thead{display:none}
+.lengths,.lengths tbody,.lengths tr,.lengths td{display:block;width:100%}
+.lengths tr{padding:1rem 0;border-bottom:1px solid var(--line)}
+.lengths td{border:0;padding:.15rem 0;white-space:normal}
+.lengths td:first-child{font-weight:600;margin-bottom:.5rem}
+.lengths td[data-label]::before{content:attr(data-label) ": ";font-family:var(--body);font-weight:500;font-size:1rem;color:var(--mute)}
+}
 </style>
 </head>
 <body>
@@ -79,13 +89,16 @@
 
 <section style="background:var(--bg2)"><div class="wrap">
 <h2>Visit <span class="hot">lengths</span></h2>
-<ul class="lengths">
-<li><span>Physiotherapy, sports &amp; gym rehabilitation, surgery rehabilitation, ICBC<small>Initial visit &middot; Follow-up visits</small></span><span>30 or 45 min &middot; 30 min</span></li>
-<li><span>Pediatric physiotherapy (0-5 years)<small>Initial visit &middot; Follow-up visits</small></span><span>45 min &middot; 30 min</span></li>
-<li><span>TMJ physiotherapy<small>Initial visit &middot; Follow-up visits</small></span><span>60 min &middot; 30 min</span></li>
-<li><span>Shockwave therapy<small>Initial visit &middot; Follow-up visits</small></span><span>45 min &middot; 30 min</span></li>
-<li><span>Low level laser therapy<small>Session</small></span><span>30-60 min</span></li>
-</ul>
+<table class="lengths">
+<thead><tr><th>Service</th><th>Initial visit</th><th>Follow-up visit</th></tr></thead>
+<tbody>
+<tr><td>Physiotherapy, sports &amp; gym rehabilitation, surgery rehabilitation, ICBC</td><td data-label="Initial visit">30 or 45 min</td><td data-label="Follow-up visit">30 min</td></tr>
+<tr><td>Pediatric physiotherapy (0-5 years)</td><td data-label="Initial visit">45 min</td><td data-label="Follow-up visit">30 min</td></tr>
+<tr><td>TMJ physiotherapy</td><td data-label="Initial visit">60 min</td><td data-label="Follow-up visit">30 min</td></tr>
+<tr><td>Shockwave therapy</td><td data-label="Initial visit">45 min</td><td data-label="Follow-up visit">30 min</td></tr>
+<tr><td>Low level laser therapy</td><td colspan="2" data-label="Session">30-60 min<span class="sub">call to book</span></td></tr>
+</tbody>
+</table>
 <p style="margin-top:1.8rem;color:var(--mute)">Prices vary by service. See our <a href="services.html#fees" style="color:var(--hot);font-weight:600">fees and coverage</a> for the latest.</p>
 </div></section>
 
