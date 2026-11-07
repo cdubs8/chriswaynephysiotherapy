@@ -22,6 +22,7 @@
 .lengths td{padding:1.1rem 1rem 1.1rem 0;border-bottom:1px solid var(--line);vertical-align:baseline;font-weight:500}
 .lengths td:not(:first-child){font-family:var(--head);font-weight:700;font-size:1.5rem;color:var(--hot);white-space:nowrap}
 .lengths .sub{font-family:var(--body);font-weight:400;font-size:1rem;color:var(--mute);margin-left:.4rem}
+.lengths .sub.block{display:block;margin:.15rem 0 0}
 @media(max-width:640px){
 .lengths thead{display:none}
 .lengths,.lengths tbody,.lengths tr,.lengths td{display:block;width:100%}
@@ -66,7 +67,7 @@
 
 <section style="background:var(--bg2)"><div class="wrap">
 <h2>Your first <span class="hot">visit</span></h2>
-<p style="margin-top:1.2rem;color:var(--mute)">Your first visit is usually 30 or 45 minutes, or 60 minutes for TMJ physiotherapy. Here is what happens.</p>
+<p style="margin-top:1.2rem;color:var(--mute)">Your first visit is usually 45 minutes, or 60 minutes for TMJ physiotherapy. If you would like to be seen sooner, a 30-minute express option is also available. Here is what happens.</p>
 <div class="tiles">
 <div class="tile" style="background:var(--bg)"><span class="num">01</span><h3>Your story</h3><p>We talk through your history, your symptoms, your goals and anything you have tried before.</p></div>
 <div class="tile" style="background:var(--bg)"><span class="num">02</span><h3>Assessment</h3><p>We look at how you move, plus strength, flexibility and anything that may be adding to the problem, to find the root cause.</p></div>
@@ -74,6 +75,7 @@
 <div class="tile" style="background:var(--bg)"><span class="num">04</span><h3>Treatment</h3><p>Treatment starts straight away, using the techniques that suit you and your issue.</p></div>
 <div class="tile" style="background:var(--bg)"><span class="num">05</span><h3>Your plan</h3><p>You leave with your first exercises, home care advice and a clear idea of your next steps.</p></div>
 </div>
+<p style="margin-top:2rem;color:var(--mute);max-width:70ch"><strong style="color:var(--bone)">Initial visit - express (30 minutes).</strong> A shorter first appointment for patients who would like to be seen sooner. Your history is spread over two sessions, but your treatment time is the same. It costs the same as the standard initial visit.</p>
 </div></section>
 
 <section><div class="wrap">
@@ -92,11 +94,12 @@
 <table class="lengths">
 <thead><tr><th>Service</th><th>Initial visit</th><th>Follow-up visit</th></tr></thead>
 <tbody>
-<tr><td>Physiotherapy, sports &amp; gym rehabilitation, surgery rehabilitation, ICBC</td><td data-label="Initial visit">30 or 45 min</td><td data-label="Follow-up visit">30 min</td></tr>
+<tr><td>Physiotherapy, sports &amp; gym rehabilitation, surgery rehabilitation</td><td data-label="Initial visit">45 min<span class="sub block">or 30 min express</span></td><td data-label="Follow-up visit">30 min</td></tr>
+<tr><td>ICBC physiotherapy</td><td data-label="Initial visit">45 min</td><td data-label="Follow-up visit">30 min</td></tr>
 <tr><td>Pediatric physiotherapy (0-5 years)</td><td data-label="Initial visit">45 min</td><td data-label="Follow-up visit">30 min</td></tr>
 <tr><td>TMJ physiotherapy</td><td data-label="Initial visit">60 min</td><td data-label="Follow-up visit">30 min</td></tr>
 <tr><td>Shockwave therapy</td><td data-label="Initial visit">45 min</td><td data-label="Follow-up visit">30 min</td></tr>
-<tr><td>Low level laser therapy</td><td data-label="Initial visit">45 min</td><td data-label="Follow-up visit">30 or 45 or 60 min</td></tr>
+<tr><td>Low level laser therapy</td><td colspan="2" data-label="Session">30-60 min<span class="sub">call to book</span></td></tr>
 </tbody>
 </table>
 <p style="margin-top:1.8rem;color:var(--mute)">Prices vary by service. See our <a href="services.html#fees" style="color:var(--hot);font-weight:600">fees and coverage</a> for the latest.</p>
