@@ -13,6 +13,12 @@
 <style>
 .num{font-family:var(--head);font-weight:800;font-size:1.2rem;letter-spacing:.08em;color:var(--hot)}
 .bar{display:block;width:2.5rem;height:4px;border-radius:2px;background:var(--hot)}
+.tile.list ul{list-style:none;padding:0;display:grid;gap:.75rem;color:var(--mute);font-size:1rem}
+.tile.list li{position:relative;padding-left:1.1rem}
+.tile.list li::before{content:"";position:absolute;left:0;top:.62em;width:.4rem;height:.4rem;border-radius:50%;background:var(--hot)}
+.tile.list li strong{color:var(--bone);font-weight:600}
+.tile.list li ul{margin-top:.55rem;gap:.35rem}
+.tile.list li li::before{width:.3rem;height:.3rem;background:var(--mute)}
 .lengths{width:100%;max-width:860px;border-collapse:collapse;margin-top:2.5rem;border-top:2px solid var(--bone)}
 .lengths th{font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:1.05rem;color:var(--mute);text-align:left;padding:.9rem 1rem .9rem 0;border-bottom:1px solid var(--line)}
 .lengths th:not(:first-child){width:12rem;white-space:nowrap}
@@ -55,11 +61,35 @@
 <section><div class="wrap">
 <h2>Before you <span class="hot">come in</span></h2>
 <p style="margin-top:1.2rem;color:var(--mute)"><strong style="color:var(--bone)">Please fill in your intake forms before your visit.</strong> After you book, they are emailed to you so you can complete them online, which we prefer. If you cannot, please arrive 10 minutes early to fill them out at the clinic. Having your forms done saves reception time and keeps your visit running smoothly. It also gives your clinician more time to prepare, so more of your appointment goes to your treatment.</p>
-<div class="tiles">
-<div class="tile"><span class="bar"></span><h3>What to wear</h3><p>Comfortable clothing that lets us see and move the sore area, such as shorts or a loose top.</p></div>
-<div class="tile"><span class="bar"></span><h3>What to bring</h3><p>Any scans or reports you have, and your insurance or claim details if they apply.</p></div>
-<div class="tile"><span class="bar"></span><h3>Parking</h3><p>There is plenty of parking at the clinic.</p></div>
-<div class="tile"><span class="bar"></span><h3>Cancellations</h3><p>We have a 24-hour cancellation policy. Missed appointments and short-notice cancellations are charged the full fee.</p></div>
+<div class="tiles" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,430px),1fr))">
+<div class="tile list"><span class="bar"></span><h3>What to wear</h3>
+<ul>
+<li><strong>Clothing:</strong> choose clothes that let you move easily and give us access to the sore area.
+<ul>
+<li>Shorts for a hip, knee, ankle or foot issue</li>
+<li>Tank top or sports bra for a shoulder or neck issue</li>
+<li>Loose t-shirt for back or posture issues</li>
+</ul></li>
+<li><strong>Footwear:</strong> your usual running or gym shoes, or the footwear or orthotics you use for work or sport.</li>
+<li><strong>Assistive devices:</strong> crutches, a brace, a sling or a walker, if you currently use them.</li>
+<li>Please remove jewelry if it will be on the treated area.</li>
+</ul></div>
+<div class="tile list"><span class="bar"></span><h3>What to bring</h3>
+<ul>
+<li><strong>ID and insurance details:</strong> your extended health or private insurance card, policy number, and certificate or ID number.</li>
+<li><strong>Claim information:</strong> your <a href="https://www.icbc.com/" target="_blank" rel="noopener" style="color:var(--hot)">ICBC</a> claim number, if your injury is from a motor vehicle accident.</li>
+<li><strong>Medical records:</strong> X-rays, MRI or CT scan reports, specialist notes, or surgery or discharge papers related to your injury.</li>
+<li><strong>Medication list:</strong> your current prescription medications and doses.</li>
+<li><strong>Doctor's referral:</strong> bring it if you have one, although a referral is generally not required to book.</li>
+</ul></div>
+<div class="tile list"><span class="bar"></span><h3>Cancellations &amp; late arrivals</h3>
+<ul>
+<li><strong>Notice period:</strong> we require 24 hours' notice for any change or cancellation. Please call us on (604) 703-6470 rather than emailing, as email may not be checked in time.</li>
+<li><strong>No-show fee:</strong> if you miss your appointment without notice, or cancel with less than 24 hours' notice, the full appointment fee is charged.</li>
+<li><strong>Insurance:</strong> extended health plans, ICBC and private insurance do not cover late cancellation or no-show fees, because no treatment was provided.</li>
+<li><strong>Arriving late:</strong> your session will still end at its scheduled time, so we can keep other patients on schedule.</li>
+</ul></div>
+<div class="tile" style="align-self:start;min-height:0"><span class="bar"></span><h3>Parking</h3><p>Parking is free, and there is plenty of space.</p></div>
 </div>
 </div></section>
 
