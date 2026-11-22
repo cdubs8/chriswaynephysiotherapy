@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +22,17 @@ section[id]{scroll-margin-top:4.5rem}
 .jump .btn{padding:.5rem 1.1rem;font-size:.95rem}
 .bar{display:block;width:2.5rem;height:4px;border-radius:2px;background:var(--hot)}
 .num{font-family:var(--head);font-weight:800;font-size:1.2rem;letter-spacing:.08em;color:var(--hot)}
+.tile.list ul{list-style:none;padding:0;display:grid;gap:.7rem;color:var(--mute);font-size:1rem}
+.tile.list li{position:relative;padding-left:1.1rem}
+.tile.list li::before{content:"";position:absolute;left:0;top:.62em;width:.4rem;height:.4rem;border-radius:50%;background:var(--hot)}
+.checks{list-style:none;padding:0;margin-top:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:0 3rem;border-top:2px solid var(--bone)}
+.checks li{display:flex;gap:.9rem;align-items:baseline;padding:1rem 0;border-bottom:1px solid var(--line);font-weight:500}
+.checks li::before{content:"";flex:none;width:.5rem;height:.5rem;border-radius:50%;background:var(--hot);transform:translateY(-.1rem)}
+.faq details ul{list-style:none;padding:0;margin:.2rem 0 1rem;display:grid;gap:.6rem;color:var(--mute)}
+.faq details li{position:relative;padding-left:1.1rem}
+.faq details li::before{content:"";position:absolute;left:0;top:.62em;width:.4rem;height:.4rem;border-radius:50%;background:var(--hot)}
+.faq details li strong{color:var(--bone)}
+.faq details > p:last-child{padding-bottom:1.3rem}
 @media(max-width:700px){.pagehead h1{font-size:clamp(2rem,10vw,2.6rem)}}
 </style>
 </head>
@@ -57,45 +67,76 @@ section[id]{scroll-margin-top:4.5rem}
 <h2>What is a <span class="hot">TMJ disorder?</span></h2>
 <p style="margin-top:1.2rem;color:var(--mute)">Temporomandibular disorders (TMD), often called TMJ disorders, are problems with the jaw joint, the muscles that move it and the structures around it. You have one temporomandibular joint (TMJ) on each side of your face, where your jawbone meets your skull.</p>
 <p style="margin-top:1rem;color:var(--mute)">TMD can have many causes, including clenching or grinding, stress, an injury to the jaw or neck, arthritis, or changes in how the jaw and neck move together. Because the cause is different for each person, your treatment should be too.</p>
+<p style="margin-top:1rem;color:var(--mute)"><strong style="color:var(--bone)">Who is this for?</strong> Anyone with new or persistent jaw and related issues.</p>
 <div class="jump">
-<a class="btn ghost" href="#signs">Signs</a>
+<a class="btn ghost" href="#signs">Symptoms</a>
 <a class="btn ghost" href="#treatment">Treatment</a>
+<a class="btn ghost" href="#benefits">Benefits</a>
+<a class="btn ghost" href="#team">Care team</a>
 <a class="btn ghost" href="#visits">Your visits</a>
 <a class="btn ghost" href="#questions">Questions</a>
 </div>
 </div></section>
 
 <section id="signs" style="background:var(--bg2)"><div class="wrap">
-<h2>Signs you may <span class="hot">have one</span></h2>
-<p style="margin-top:1.2rem;color:var(--mute)">TMD can show up in more than one way. Common signs include:</p>
-<div class="tiles" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))">
-<div class="tile" style="background:var(--bg)"><span class="bar"></span><h3>Jaw pain</h3><p>An ache or sharp pain in or around the jaw, often worse when you chew or talk.</p></div>
-<div class="tile" style="background:var(--bg)"><span class="bar"></span><h3>Clicking or locking</h3><p>Clicking, popping or catching when you open and close your mouth, or a jaw that sticks.</p></div>
-<div class="tile" style="background:var(--bg)"><span class="bar"></span><h3>Trouble chewing or opening wide</h3><p>Difficulty biting into food, yawning or opening your mouth as far as you used to.</p></div>
-<div class="tile" style="background:var(--bg)"><span class="bar"></span><h3>Headaches and facial pain</h3><p>Headaches, earaches or pain in the temples and cheeks that seem linked to your jaw.</p></div>
-<div class="tile" style="background:var(--bg)"><span class="bar"></span><h3>Neck and jaw tension</h3><p>Tight, sore muscles in the neck and jaw, often with stiffness through the shoulders.</p></div>
+<h2>Symptoms we <span class="hot">treat</span></h2>
+<p style="margin-top:1.2rem;color:var(--mute)">TMD can show up well beyond the jaw. Common symptoms include:</p>
+<div class="tiles" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))">
+<div class="tile list" style="background:var(--bg)"><span class="bar"></span><h3>Jaw</h3><ul><li>Pain, tension or stiffness</li><li>Uneven jaw movements, abnormal bite or clicking</li><li>Clenching or grinding</li><li>Popping or locking</li></ul></div>
+<div class="tile list" style="background:var(--bg)"><span class="bar"></span><h3>Spinal</h3><ul><li>Neck and back pain, tension or stiffness</li><li>Forward head posture</li></ul></div>
+<div class="tile list" style="background:var(--bg)"><span class="bar"></span><h3>Ear, nose &amp; throat</h3><ul><li>Ear aching, blocking or ringing</li><li>Swallowing difficulties</li><li>Facial pain or pressure</li><li>Sleeping difficulties</li></ul></div>
+<div class="tile list" style="background:var(--bg)"><span class="bar"></span><h3>Neurological</h3><ul><li>Headaches</li><li>Light-headedness</li><li>Brain fog</li></ul></div>
 </div>
 </div></section>
 
 <section id="treatment"><div class="wrap">
 <h2>How we <span class="hot">treat it</span></h2>
-<p style="margin-top:1.2rem;color:var(--mute)">Chris is certified in the Goralsky Craniomandibular Method, a specialized approach to assessing and treating jaw pain and dysfunction. Your treatment is chosen after your assessment and may include:</p>
-<div class="tiles" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))">
-<div class="tile"><span class="bar"></span><h3>Goralsky Craniomandibular Method</h3><p>A specialized approach to assessing and treating jaw pain and dysfunction.</p></div>
-<div class="tile"><span class="bar"></span><h3>Manual therapy</h3><p>Hands-on treatment for the jaw, neck and surrounding muscles to ease pain and tension.</p></div>
-<div class="tile"><span class="bar"></span><h3>Exercise</h3><p>Gentle, progressive exercises to improve how your jaw moves and to build control.</p></div>
-<div class="tile"><span class="bar"></span><h3>Dry needling</h3><p>Fine needles to help release tight muscles around the jaw and neck.</p></div>
-<div class="tile"><span class="bar"></span><h3>Education</h3><p>Simple strategies for everyday habits such as posture, chewing and clenching, so you can manage symptoms between visits.</p></div>
+<p style="margin-top:1.2rem;color:var(--mute)">Our program uses the most up-to-date research to inform best practice. We use a comprehensive assessment process, and your treatment is built around your needs and wants. It may include:</p>
+<div class="tiles" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))">
+<div class="tile"><span class="bar"></span><h3>Goralsky Craniomandibular Method</h3><p>A specialized approach to assessing and treating jaw pain and dysfunction. Chris is a certified provider.</p></div>
+<div class="tile"><span class="bar"></span><h3>Jaw, head &amp; neck rehabilitation</h3><p>Treatment and rehabilitation that looks at your jaw, head and neck together, not in isolation.</p></div>
+<div class="tile"><span class="bar"></span><h3>Manual therapy &amp; massage</h3><p>Hands-on treatment to ease pain and tension in the jaw, neck and surrounding muscles.</p></div>
+<div class="tile"><span class="bar"></span><h3>Dry needling (IMS)</h3><p>Fine needles to help release tight muscles around the jaw and neck.</p></div>
+<div class="tile"><span class="bar"></span><h3>Therapeutic exercise</h3><p>Gentle, progressive exercises to improve how your jaw moves and to build control.</p></div>
+<div class="tile"><span class="bar"></span><h3>Self-help techniques</h3><p>Simple strategies you can use at home to manage symptoms between visits.</p></div>
+<div class="tile"><span class="bar"></span><h3>Breathing retraining</h3><p>Guidance on breathing patterns that can add to tension in the jaw and neck.</p></div>
+<div class="tile"><span class="bar"></span><h3>Red light therapy &amp; cold laser</h3><p>Gentle, non-invasive light therapy that may help ease pain and support healing in the tissues around the jaw. It can be added to your other treatment.</p></div>
 </div>
 <p style="margin-top:1.8rem;color:var(--mute)">Want to know more about our techniques? See the <a href="services.html#techniques" style="color:var(--hot);font-weight:600">Treatment Techniques section of our Services page</a>.</p>
 </div></section>
 
+<section id="benefits" style="background:var(--bg2)"><div class="wrap">
+<h2>How you can <span class="hot">benefit</span></h2>
+<ul class="checks">
+<li>Full resolution or a meaningful reduction of symptoms</li>
+<li>Reduced risk of long-lasting symptoms and arthritis</li>
+<li>Better daily function at home, work, school and in physical activities</li>
+<li>Feeling empowered</li>
+<li>Better quality of sleep</li>
+<li>Addressing the root causes of your issues</li>
+</ul>
+</div></section>
+
+<section id="team"><div class="wrap">
+<h2>Working with <span class="hot">your care team</span></h2>
+<p style="margin-top:1.2rem;color:var(--mute)">We provide specialized TMD services and work with many other health professionals. When it helps your recovery, we may refer you to, or work alongside:</p>
+<div class="tiles" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))">
+<div class="tile"><span class="bar"></span><h3>Dentists</h3><p>For questions about your bite, teeth and any oral appliance.</p></div>
+<div class="tile"><span class="bar"></span><h3>Doctors</h3><p>For diagnosis, imaging, medication and your general health.</p></div>
+<div class="tile"><span class="bar"></span><h3>Orofacial myofunctional therapists</h3><p>For training the tongue, lips and swallowing patterns.</p></div>
+<div class="tile"><span class="bar"></span><h3>ENTs</h3><p>Ear, nose and throat specialists, for related ear and throat symptoms.</p></div>
+<div class="tile"><span class="bar"></span><h3>Sleep specialists</h3><p>For sleep problems that may be linked to your jaw or breathing.</p></div>
+</div>
+<p style="margin-top:1.8rem;color:var(--mute)">You and your health care providers will receive a comprehensive treatment plan, so everyone is working toward the same goals.</p>
+</div></section>
+
 <section id="visits" style="background:var(--bg2)"><div class="wrap">
 <h2>Your <span class="hot">visits</span></h2>
-<div class="tiles" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))">
+<div class="tiles" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))">
 <div class="tile" style="background:var(--bg)"><span class="num">01</span><h3>First visit: 60 minutes</h3><p>We listen to your story, assess your jaw, neck and posture, explain what we find, start treatment and give you your first exercises.</p></div>
 <div class="tile" style="background:var(--bg)"><span class="num">02</span><h3>Follow-ups: 30 minutes</h3><p>We review your progress, continue treatment, progress your exercises and plan what comes next.</p></div>
-<div class="tile" style="background:var(--bg)"><span class="num">03</span><h3>Fees and coverage</h3><p>TMJ physiotherapy has its own fees, and many extended health plans cover physiotherapy. <a href="services.html#fees" style="color:var(--hot);font-weight:600">See our fees and coverage</a>.</p></div>
+<div class="tile" style="background:var(--bg)"><span class="num">03</span><h3>How many visits?</h3><p>On average, 5 to 6 visits for new injuries and 6 to 12 visits for chronic injuries. Your plan depends on you.</p></div>
+<div class="tile" style="background:var(--bg)"><span class="num">04</span><h3>Fees and coverage</h3><p>TMJ physiotherapy has its own fees, and many extended health plans cover physiotherapy. <a href="services.html#fees" style="color:var(--hot);font-weight:600">See our fees and coverage</a>.</p></div>
 </div>
 <p style="margin-top:1.8rem;color:var(--mute)">After you book, your intake forms are emailed to you. Please complete them before your visit. <a href="what-to-expect.html" style="color:var(--hot);font-weight:600">See what to expect</a>.</p>
 </div></section>
@@ -104,14 +145,31 @@ section[id]{scroll-margin-top:4.5rem}
 <h2>TMJ <span class="hot">questions</span></h2>
 <div style="margin-top:2rem;border-top:2px solid var(--bone)">
 <details><summary>Do I need a referral?</summary><p>No. You can book directly with us. If you are claiming through insurance, check with your provider first in case they have their own requirements.</p></details>
-<details><summary>How many visits will I need?</summary><p>It depends on the cause and how long you have had symptoms. You will get an honest estimate after your first visit, and we review it as you improve.</p></details>
+<details><summary>How many visits will I need?</summary><p>On average, people with a new injury need 5 to 6 visits, and people with a chronic injury need 6 to 12. It depends on the cause and how long you have had symptoms. You will get an honest estimate after your first visit, and we review it as you improve.</p></details>
 <details><summary>Will treatment be painful?</summary><p>Most people find treatment comfortable. Some techniques can cause mild, short-lived soreness. We always explain what to expect and adjust to what feels right for you.</p></details>
-<details><summary>When should I go to the emergency room?</summary><p>Go to the emergency room if your jaw is locked open or shut, or you think your jaw may be broken. If you are unsure, call 811 or your doctor.</p></details>
+<details><summary>What should I do if my jaw is locked shut?</summary><p>If you can close your mouth but cannot open it normally, do not force it. Pulling, stretching or testing the jaw again and again can make the muscles guard harder and the jaw more irritated. Instead:</p>
+<ul>
+<li><strong>Rest it.</strong> For a day or two, stick to foods that need very little chewing, such as soup, eggs, yogurt, pasta, soft rice and fish. Avoid gum, steak, raw vegetables, large sandwiches and chewy bread.</li>
+<li><strong>Keep it relaxed.</strong> When you are not eating, let your lips rest together and your teeth stay slightly apart. Do not clench, do not open as wide as you can, and support your jaw with your hand when you yawn.</li>
+<li><strong>Try heat or cold.</strong> Use whichever feels better on the sore area for short periods, with a cloth between the pack and your skin.</li>
+<li><strong>Check any medication.</strong> Take an over-the-counter pain reliever only if it is safe for you, and follow the label or your doctor's advice.</li>
+</ul>
+<p>A brief catch that releases right away and leaves your jaw moving normally can usually be watched. If your jaw stays limited, or keeps locking, call your doctor or the nurse line (see below), and book a TMJ assessment so we can work out why it is happening. This is general information and does not replace an in-person assessment.</p></details>
+<details><summary>When should I call my doctor or the nurse line?</summary><p>Call your doctor, or HealthLink BC's nurse line at 811, if:</p>
+<ul>
+<li>your jaw stays locked, or you cannot open it about two finger-widths</li>
+<li>you cannot eat or drink comfortably, or your pain is severe or getting worse</li>
+<li>your bite suddenly feels different</li>
+<li>the locking keeps coming back</li>
+<li>a click you used to have has stopped and your jaw now opens less</li>
+<li>this is your first unexplained lock and it has not released</li>
+</ul>
+<p>Go to the emergency department, or call 911, if your mouth is stuck open and will not close, if you have trouble breathing, swallowing or managing your saliva, if the problem began after a fall, blow or accident, or if you have fast-growing swelling in your face or neck, fever with swelling or dental pain, new facial weakness or numbness, trouble speaking, vision changes, or a sudden severe headache. If your mouth is stuck open, support your jaw gently with your hand and do not try to force it back.</p></details>
 <details><summary>Is TMJ treatment covered by insurance?</summary><p>Many extended health plans cover physiotherapy, but coverage varies, so check your annual limit and what your plan requires. Our <a href="services.html#fees" style="color:var(--hot)">fees and coverage</a> section has more detail.</p></details>
 </div>
 </div></section>
 
-<div class="band"><div class="wrap"><h2>Start with an<br>assessment.</h2><p>Book a TMJ physiotherapy assessment and we will find the cause.</p><a class="btn" href="https://optimumclinic.janeapp.com/#/staff_member/48" target="_blank" rel="noopener">Book today</a></div></div>
+<div class="band"><div class="wrap"><h2>Get back to<br>what you love.</h2><p>Book a TMJ physiotherapy assessment and we will find the cause.</p><a class="btn" href="https://optimumclinic.janeapp.com/#/staff_member/48" target="_blank" rel="noopener">Book today</a></div></div>
 </main>
 <footer class="site">
   <div class="wrap">
