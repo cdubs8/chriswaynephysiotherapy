@@ -125,3 +125,58 @@ nav a[aria-current]{color:#fff!important;border-bottom:2px solid var(--sky)}
   header:not(.has-menu) .wrap{flex-wrap:wrap}
   header:not(.has-menu) nav{flex-wrap:wrap;gap:.6rem 1.1rem}
 }
+
+/* ---------- Phone-friendly layout: screens up to 700px wide (desktop is unchanged) ---------- */
+details.fold>summary{display:none}
+.to-top{display:none}
+@media(max-width:700px){
+  body{font-size:1rem;line-height:1.5}
+  section{padding:2.6rem 0}
+  .hero{padding:2.2rem 0 1.8rem}
+  .hero h1{font-size:clamp(2.8rem,14vw,3.6rem)}
+  .hero p.lead{font-size:1.1rem;margin:1.1rem 0 1.4rem}
+  .pagehead{padding:2.2rem 0 1.8rem}
+  .pagehead h1{font-size:clamp(2.4rem,12vw,3rem)}
+  .pagehead p{font-size:1.05rem;margin-top:.8rem}
+  h2{font-size:clamp(1.9rem,9vw,2.4rem)}
+  h3{font-size:1.45rem}
+  .band{padding:2.6rem 0}
+  .band h2{font-size:clamp(2.2rem,11vw,3rem)}
+  .band p{margin:.8rem auto 1.2rem}
+  .ticker{padding:.7rem 0}
+  .ticker div{font-size:1.2rem}
+  .intro{gap:1.6rem}
+  .proof strong{font-size:1.5rem}
+  .proof div{padding:.8rem 0}
+  .split{padding:1.6rem 0;gap:.8rem}
+  .split li{padding:.4rem 0}
+  .quote blockquote{font-size:1.5rem;margin:1rem 0}
+  .faq summary{font-size:1.25rem;padding:1rem 0}
+  .locs{margin-top:1.4rem}
+  .loc{padding:1.2rem}
+  form{margin-top:1.2rem}
+  footer.site{padding:1.8rem 0}
+  .person .ph{max-width:220px}
+  section p[style*="1.8rem"]{margin:0 0 .9rem !important}
+
+  /* card groups become swipeable rows instead of long stacks */
+  .tiles,.values{display:flex !important;overflow-x:auto;scroll-snap-type:x mandatory;gap:.8rem;margin:1.4rem -1.25rem 0;padding:0 1.25rem .8rem;scroll-padding-left:1.25rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .tiles::-webkit-scrollbar,.values::-webkit-scrollbar{display:none}
+  .tiles>*,.values>*{flex:0 0 82%;min-width:0;scroll-snap-align:start}
+  .tile{min-height:0;padding:1.2rem;gap:.6rem}
+  .tile p{font-size:.98rem}
+  .tiles.tall{align-items:flex-start}
+
+  /* long lists fold away until you tap them */
+  details.fold>summary{display:flex;justify-content:space-between;align-items:center;cursor:pointer;list-style:none;padding:.75rem 1.1rem;border:2px solid var(--bone);border-radius:999px;font-weight:600;margin-top:1rem}
+  details.fold>summary::-webkit-details-marker{display:none}
+  details.fold>summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--hot)}
+  details.fold[open]>summary::after{content:"\2212"}
+  details.fold[open]>summary{margin-bottom:.8rem}
+  section .jump{flex-wrap:nowrap;overflow-x:auto;margin-right:-1.25rem;padding-right:1.25rem;scrollbar-width:none}
+  section .jump::-webkit-scrollbar{display:none}
+  section .jump .btn{flex:none}
+
+  /* back-to-top button */
+  .to-top.show{display:flex;align-items:center;justify-content:center;position:fixed;right:1rem;bottom:1rem;z-index:20;width:3rem;height:3rem;border-radius:50%;border:0;background:var(--navy);color:#fff;font-size:1.4rem;box-shadow:0 6px 18px rgba(0,0,0,.3);cursor:pointer}
+}
