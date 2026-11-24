@@ -94,8 +94,14 @@
   document.body.classList.add('has-bar');
 
   var scrolled = false, endInView = false, typing = false;
-  function update() { bar.classList.toggle('show', mq.matches && scrolled && !endInView && !typing); }
+  function update() {
+    var on = mq.matches && scrolled && !endInView && !typing;
+    bar.classList.toggle('show', on);
+    document.body.classList.toggle('bar-on', on);
+    document.documentElement.style.setProperty('--bar-h', bar.offsetHeight + 'px');
+  }
 
+  window.addEventListener('resize', update);
   window.addEventListener('scroll', function () { scrolled = window.scrollY > 400; update(); }, { passive: true });
   scrolled = window.scrollY > 400;
 
