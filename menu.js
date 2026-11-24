@@ -78,3 +78,37 @@
   up.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
   onScroll();
 })();
+
+/* ---------- Phone booking bar: Book now and Call, shown after you start scrolling ---------- */
+(function () {
+  if (/book\.html/.test(location.pathname)) return;
+  var mq = window.matchMedia('(max-width: 700px)');
+  var bar = document.createElement('div');
+  bar.className = 'book-bar';
+  bar.innerHTML =
+    '<a class="main" href="https://optimumclinic.janeapp.com/#/staff_member/48" target="_blank" rel="noopener">Book now</a>' +
+    '<a class="call" href="tel:+16047036470" aria-label="Call (604) 703-6470">' +
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>';
+  document.body.appendChild(bar);
+  document.body.classList.add('has-bar');
+
+  var scrolled = false, endInView = false, typing = false;
+  function update() { bar.classList.toggle('show', mq.matches && scrolled && !endInView && !typing); }
+
+  window.addEventListener('scroll', function () { scrolled = window.scrollY > 400; update(); }, { passive: true });
+  scrolled = window.scrollY > 400;
+
+  if ('IntersectionObserver' in window) {
+    var seen = new Set();
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) seen.add(en.target); else seen.delete(en.target); });
+      endInView = seen.size > 0; update();
+    });
+    [].slice.call(document.querySelectorAll('.band, footer.site')).forEach(function (el) { io.observe(el); });
+  }
+  document.addEventListener('focusin', function (e) { if (/^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName)) { typing = true; update(); } });
+  document.addEventListener('focusout', function () { typing = false; update(); });
+  if (mq.addEventListener) mq.addEventListener('change', update); else if (mq.addListener) mq.addListener(update);
+  update();
+})();
