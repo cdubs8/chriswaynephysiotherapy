@@ -12,6 +12,11 @@
 <script src="menu.js" defer></script>
 <style>
 section[id]{scroll-margin-top:4.5rem}
+.feelist{list-style:none;padding:0;margin-top:1rem;border-top:2px solid var(--bone)}
+.feelist li{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--line);font-weight:500}
+.feelist li span:last-child{font-family:var(--head);font-weight:700;font-size:1.4rem;color:var(--hot);text-align:right;white-space:nowrap}
+.feegroups{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:2.5rem 3rem;margin-top:2.5rem}
+.feegroup h3{font-size:1.6rem}
 .num{font-family:var(--head);font-weight:800;font-size:1.2rem;letter-spacing:.08em;color:var(--hot)}
 .bar{display:block;width:2.5rem;height:4px;border-radius:2px;background:var(--hot)}
 .tile.list ul{list-style:none;padding:0;display:grid;gap:.75rem;color:var(--mute);font-size:1rem}
@@ -20,20 +25,7 @@ section[id]{scroll-margin-top:4.5rem}
 .tile.list li strong{color:var(--bone);font-weight:600}
 .tile.list li ul{margin-top:.55rem;gap:.35rem}
 .tile.list li li::before{width:.3rem;height:.3rem;background:var(--mute)}
-.lengths{width:100%;max-width:860px;border-collapse:collapse;margin-top:2.5rem;border-top:2px solid var(--bone)}
-.lengths th{font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:1.05rem;color:var(--mute);text-align:left;padding:.9rem 1rem .9rem 0;border-bottom:1px solid var(--line)}
-.lengths th:not(:first-child){width:12rem;white-space:nowrap}
-.lengths td{padding:1.1rem 1rem 1.1rem 0;border-bottom:1px solid var(--line);vertical-align:baseline;font-weight:500}
-.lengths td:not(:first-child){font-family:var(--head);font-weight:700;font-size:1.5rem;color:var(--hot);white-space:nowrap}
-.lengths .sub{font-family:var(--body);font-weight:400;font-size:1rem;color:var(--mute);margin-left:.4rem}
-.lengths .sub.block{display:block;margin:.15rem 0 0}
 @media(max-width:640px){
-.lengths thead{display:none}
-.lengths,.lengths tbody,.lengths tr,.lengths td{display:block;width:100%}
-.lengths tr{padding:1rem 0;border-bottom:1px solid var(--line)}
-.lengths td{border:0;padding:.15rem 0;white-space:normal}
-.lengths td:first-child{font-weight:600;margin-bottom:.5rem}
-.lengths td[data-label]::before{content:attr(data-label) ": ";font-family:var(--body);font-weight:500;font-size:1rem;color:var(--mute)}
 }
 </style>
 </head>
@@ -124,18 +116,34 @@ section[id]{scroll-margin-top:4.5rem}
 
 <section style="background:var(--bg2)"><div class="wrap">
 <h2>Visit <span class="hot">lengths</span></h2>
-<table class="lengths">
-<thead><tr><th>Service</th><th>Initial visit</th><th>Follow-up visit</th></tr></thead>
-<tbody>
-<tr><td>Physiotherapy, sports &amp; gym rehabilitation, surgery rehabilitation</td><td data-label="Initial visit">45 min<span class="sub block">or 30 min express</span></td><td data-label="Follow-up visit">30 min</td></tr>
-<tr><td>ICBC physiotherapy</td><td data-label="Initial visit">45 min</td><td data-label="Follow-up visit">30 min</td></tr>
-<tr><td>Pediatric physiotherapy (0-5 years)</td><td data-label="Initial visit">45 min</td><td data-label="Follow-up visit">30 min</td></tr>
-<tr><td>TMJ physiotherapy</td><td data-label="Initial visit">60 min</td><td data-label="Follow-up visit">30 min</td></tr>
-<tr><td>Shockwave therapy</td><td data-label="Initial visit">45 min</td><td data-label="Follow-up visit">30 min</td></tr>
-<tr><td>Low level laser therapy</td><td data-label="Initial visit">45 min<span class="sub block">call to book</span></td><td data-label="Follow-up visit">30, 45 or 60 min</td></tr>
-</tbody>
-</table>
-<p style="margin-top:1.8rem;color:var(--mute)">Prices vary by service. See our <a href="services.html#fees" style="color:var(--hot);font-weight:600">fees and coverage</a> for the latest.</p>
+<p style="margin-top:1.2rem;color:var(--mute)">How long each visit takes, grouped the same way as our fees. For prices, see our <a href="services.html#fees" style="color:var(--hot);font-weight:600">fees and coverage</a>.</p>
+<div class="feegroups">
+<div class="feegroup"><h3>Physiotherapy, sports &amp; gym rehabilitation, surgery rehabilitation</h3><ul class="feelist">
+<li><span>Initial visit</span><span>45 min</span></li>
+<li><span>Initial visit - express</span><span>30 min</span></li>
+<li><span>Follow-up visit</span><span>30 min</span></li>
+</ul></div>
+<div class="feegroup"><h3>ICBC physiotherapy</h3><ul class="feelist">
+<li><span>Initial visit</span><span>45 min</span></li>
+<li><span>Follow-up visit</span><span>30 min</span></li>
+</ul></div>
+<div class="feegroup"><h3>Pediatric physiotherapy (0-5 years)</h3><ul class="feelist">
+<li><span>Initial visit</span><span>45 min</span></li>
+<li><span>Follow-up visit</span><span>30 min</span></li>
+</ul></div>
+<div class="feegroup"><h3>TMJ physiotherapy</h3><ul class="feelist">
+<li><span>Initial visit</span><span>60 min</span></li>
+<li><span>Follow-up visit</span><span>30 min</span></li>
+</ul></div>
+<div class="feegroup"><h3>Shockwave therapy</h3><ul class="feelist">
+<li><span>Initial visit</span><span>45 min</span></li>
+<li><span>Follow-up visit</span><span>30 min</span></li>
+</ul></div>
+<div class="feegroup"><h3>Low level laser therapy</h3><ul class="feelist">
+<li><span>Initial visit</span><span>45 min</span></li>
+<li><span>Follow-up visit</span><span>30, 45 or 60 min</span></li>
+</ul><p class="note" style="margin-top:.7rem">Call to book</p></div>
+</div>
 </div></section>
 
 <section><div class="wrap">
