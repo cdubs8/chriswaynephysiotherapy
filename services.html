@@ -15,11 +15,12 @@
 .split .btn{margin-top:1.4rem;padding:.6rem 1.3rem}
 .bar{display:block;width:2.5rem;height:4px;border-radius:2px;background:var(--hot)}
 .feelist{list-style:none;padding:0;margin-top:2rem;max-width:720px;border-top:2px solid var(--bone)}
-.feegroups{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:2.5rem 3rem;margin-top:2.5rem}
+.feegroups{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:2.5rem 3rem;margin-top:2.5rem}
 .feegroups .feelist{margin-top:1rem;max-width:none}
 .feegroup h3{font-size:1.6rem}
 .feelist li{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--line);font-weight:500}
-.feelist li span:last-child{font-family:var(--head);font-weight:700;font-size:1.4rem;color:var(--hot);text-align:right}
+.feelist li span:last-child{font-family:var(--head);font-weight:700;font-size:1.4rem;color:var(--hot);text-align:right;white-space:nowrap}
+.feelist small{display:block;color:var(--mute);font-weight:400;font-size:.95rem}
 </style>
 </head>
 <body>
@@ -69,28 +70,29 @@
 <p style="margin-top:1.2rem;color:var(--mute)">Fees can change, so please check the <a href="https://optimumclinic.ca/forms-and-fees/" target="_blank" rel="noopener" style="color:var(--hot)">current fee list</a> or call the clinic.</p>
 <div class="feegroups">
 <div class="feegroup"><h3>Physiotherapy, sports &amp; gym rehabilitation, surgery rehabilitation</h3><ul class="feelist">
-<li><span>Initial visit (45 minutes)</span><span>$125</span></li>
-<li><span>Initial visit - express (30 minutes)</span><span>$125</span></li>
-<li><span>Follow-up visit (30 minutes)</span><span>$95</span></li>
+<li><span>Initial visit<small>45 minutes</small></span><span>$125</span></li>
+<li><span>Initial visit - express<small>30 minutes</small></span><span>$125</span></li>
+<li><span>Follow-up visit<small>30 minutes</small></span><span>$95</span></li>
 </ul></div>
 <div class="feegroup"><h3>ICBC physiotherapy</h3><ul class="feelist">
-<li><span>Initial visit (45 minutes)</span><span>$0 (no user fee)</span></li>
-<li><span>Follow-up visit (30 minutes)</span><span>$0 (no user fee)</span></li>
+<li><span>Initial visit<small>45 minutes</small></span><span>$0 (no user fee)</span></li>
+<li><span>Follow-up visit<small>30 minutes</small></span><span>$0 (no user fee)</span></li>
 </ul></div>
 <div class="feegroup"><h3>Pediatric physiotherapy (0-5 years)</h3><ul class="feelist">
-<li><span>Initial visit (45 minutes)</span><span>$125</span></li>
-<li><span>Follow-up visit (30 minutes)</span><span>$95</span></li>
+<li><span>Initial visit<small>45 minutes</small></span><span>$125</span></li>
+<li><span>Follow-up visit<small>30 minutes</small></span><span>$95</span></li>
 </ul></div>
 <div class="feegroup"><h3>TMJ physiotherapy</h3><ul class="feelist">
-<li><span>Initial visit (60 minutes)</span><span>$170</span></li>
-<li><span>Follow-up visit (30 minutes)</span><span>$125</span></li>
+<li><span>Initial visit<small>60 minutes</small></span><span>$170</span></li>
+<li><span>Follow-up visit<small>30 minutes</small></span><span>$125</span></li>
 </ul></div>
 <div class="feegroup"><h3>Shockwave therapy</h3><ul class="feelist">
-<li><span>Initial visit (45 minutes)</span><span>$125</span></li>
-<li><span>Follow-up visit (30 minutes)</span><span>$110</span></li>
+<li><span>Initial visit<small>45 minutes</small></span><span>$125</span></li>
+<li><span>Follow-up visit<small>30 minutes</small></span><span>$110</span></li>
 </ul></div>
 <div class="feegroup"><h3>Low level laser therapy</h3><ul class="feelist">
-<li><span>Session (30-60 minutes)</span><span>Call to book</span></li>
+<li><span>Initial visit<small>45 minutes</small></span><span>Call to book</span></li>
+<li><span>Follow-up visit<small>30, 45 or 60 minutes</small></span><span>Call to book</span></li>
 </ul></div>
 </div>
 <div class="tiles">
