@@ -167,6 +167,13 @@ details.fold>summary{display:none}
   .tile p{font-size:.98rem}
   .tiles.tall{align-items:flex-start}
 
+  /* grouped fee and visit-length cards swipe sideways like the other card rows */
+  .feegroups{display:flex !important;overflow-x:auto;scroll-snap-type:x mandatory;gap:.8rem;margin:1.4rem -1.25rem 0;padding:0 1.25rem .8rem;scroll-padding-left:1.25rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .feegroups::-webkit-scrollbar{display:none}
+  .feegroups>.feegroup{flex:0 0 82%;min-width:0;scroll-snap-align:start;background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:1.2rem}
+  .feegroup h3{font-size:1.35rem}
+  .feegroups .feelist li{padding:.8rem 0}
+
   /* long lists fold away until you tap them */
   details.fold>summary{display:flex;justify-content:space-between;align-items:center;cursor:pointer;list-style:none;padding:.75rem 1.1rem;border:2px solid var(--bone);border-radius:999px;font-weight:600;margin-top:1rem}
   details.fold>summary::-webkit-details-marker{display:none}
