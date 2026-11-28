@@ -133,7 +133,7 @@ details.fold>summary{display:none}
   body{font-size:1rem;line-height:1.5}
   section{padding:2.6rem 0}
   .hero{padding:2.2rem 0 1.8rem}
-  .hero h1{font-size:clamp(2.8rem,14vw,3.6rem)}
+  .hero h1{font-size:clamp(2.2rem,11vw,3rem)}
   .hero p.lead{font-size:1.1rem;margin:1.1rem 0 1.4rem}
   .pagehead{padding:2.2rem 0 1.8rem}
   .pagehead h1{font-size:clamp(2.4rem,12vw,3rem)}
